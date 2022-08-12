@@ -1,0 +1,31 @@
+<UI>:
+    FloatLayout:
+        size: root.size
+        Image:
+            source: 'C:\\Users\\narin\\Documents\\Python\\Paopao_project_2022\\test_mobile_app\\mobile_env\\login_page_kv\\images\\kivy-logo-black-256.png'
+            pos: (270, 300)
+            size_hint: (.3, .3)
+        TextInput:
+            id: username_input
+            multiline: False
+            pos: (270, 250)
+            size_hint: (.3, .05)
+            hint_text: 'username'
+            on_text: app.username_listener()
+        TextInput:
+            id: password_input
+            multiline: False
+            pos: (270, 210)
+            size_hint: (.3, .05)
+            hint_text: 'password'
+            on_text: app.password_listener()
+        Button
+            id: login_button
+            text: 'LOG IN'
+            font_name: "Comic"
+            pos: (270, 150)
+            size_hint: (.3, .075)
+            background_color: (1,0.5,0,1)
+            on_press: app.login_button_listener()
+            on_release: print("button released.")
+        
